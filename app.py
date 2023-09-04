@@ -35,7 +35,8 @@ def jaccard_distance(y_true, y_pred):
     return -iou(y_true_flatten, y_pred_flatten)
 
 st.title("Brain MRI Segmentation App")
-# model_url = "https://github.com/AbhiSinha08/med-vault/releases/download/v1.0/brain_MRI_seg.hdf5"
+# This is hosted on local environment for faster extraction if we have to host on some other platform 
+# then we upload the model weights and the model itself on the github code releases to extract it from any system bbut the extraction is particularly slow
 model_url = "C:/Users/Hriday Ahuja/Desktop/Flipkart/brain_MRI_seg.hdf5"
 response = requests.get(model_url)
 model_filename = "brain_MRI_seg.hdf5"
